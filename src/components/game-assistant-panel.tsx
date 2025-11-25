@@ -4,6 +4,7 @@ import { useState } from "react";
 import {
   Card,
   CardContent,
+  CardFooter,
   CardHeader,
 } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
@@ -16,6 +17,8 @@ import {
 } from "@/components/ui/select";
 import { Slider } from "@/components/ui/slider";
 import { Switch } from "@/components/ui/switch";
+import { Button } from "@/components/ui/button";
+import { Download } from "lucide-react";
 
 function SettingItem({
   label,
@@ -117,6 +120,14 @@ export function GameAssistantPanel() {
           </div>
         </div>
       </CardContent>
+      <CardFooter className="p-6 pt-0 sm:p-8 sm:pt-0">
+        <Button asChild className="w-full">
+          <a href="/vanguard-assistant.apk" download>
+            <Download className="mr-2 h-4 w-4" />
+            Download Vanguard Assistant.apk
+          </a>
+        </Button>
+      </CardFooter>
     </Card>
   );
 }
